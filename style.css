@@ -20,34 +20,30 @@ body {
     height: 100%;
 }
 
-#artwork-url {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    text-align: center;
-}
+#artwork-url {}
 
-#artwork-container {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
+#artwork-container {}
 
 #artwork-save-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: -10%;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  #artwork-save-overlay {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
 }
 
 #download-container {
@@ -98,7 +94,7 @@ body {
     bottom: var(--spacing);
     left: var(--spacing);
 
-    /*padding: 20px 80px 20px 20px;*/
+    padding: 20px 80px 20px 20px;
 
     max-width: calc(100% - 120px);
 
