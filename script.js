@@ -117,7 +117,7 @@
         let linkToArtwork = 'https://www.artic.edu/artworks/' + artwork.id + '/' + slugify(titlePrint);
 
         // Track referrals from the extension in analytics
-        linkToArtwork += '?utm_medium=chrome-extension&utm_source=' + titlePrint;
+        linkToArtwork += '?utm_medium=chrome-extension-spudart&utm_source=' + titlePrint;
 
         artistElement.innerHTML = artistPrint;
         titleElement.innerHTML = titlePrint;
